@@ -1,0 +1,7 @@
+{
+  "name": "hallPlay",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
