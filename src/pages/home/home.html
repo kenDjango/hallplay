@@ -1,14 +1,21 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Hall PLay
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label color="primary" stacked>Login</ion-label>
+    <ion-input placeholder=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="primary" stacked>Password</ion-label>
+    <ion-input type="password" placeholder=""></ion-input>
+  </ion-item>
+
+  <button ion-button (click)="onGoToMenu()">Login</button>
 </ion-content>

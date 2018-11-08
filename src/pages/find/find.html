@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Trouver une partie</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+
+  <button ion-button full (click)="takePhoto()" >
+    <ion-icon name="camera"></ion-icon>Prendre une photo
+  </button>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 >
+        <div *ngIf="photo != null">
+          <ion-card class="block" >
+            <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto()"></ion-icon>
+            <img [src]="photo"/>
+          </ion-card>
+        </div>
+        <div *ngIf="photo == null">
+          <p>Prends une photo d'un QR code pour rejoindre une partie</p>
+          <img src="assets/imgs/qr.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col col-auto >
+        <div *ngIf="photo != null">
+          <button ion-button (click)="joinGame()" >
+            Rejoindre
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
